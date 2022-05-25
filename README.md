@@ -1,4 +1,4 @@
-![Runtime](https://github.com/wickwirew/Runtime/blob/master/Resources/Runtime.png)
+![Runtime](https://github.com/wildthink/Runtime/blob/master/Resources/Runtime.png)
 
 <!-- TODO replace with GitHub build badge -->
 ![Swift 5.0](https://img.shields.io/badge/Swift-5.0-green.svg)
@@ -86,7 +86,7 @@ import PackageDescription
 let package = Package(
     [...]
     dependencies: [
-        .Package(url: "https://github.com/wickwirew/Runtime.git", majorVersion: XYZ)
+        .Package(url: "https://github.com/wildthink/Runtime.git", majorVersion: XYZ)
     ]
 )
 ```
