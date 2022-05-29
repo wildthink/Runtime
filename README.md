@@ -86,7 +86,7 @@ import PackageDescription
 let package = Package(
     [...]
     dependencies: [
-        .Package(url: "https://github.com/wickwirew/Runtime.git", majorVersion: XYZ)
+        .Package(url: "https://github.com/wildthink/Runtime.git", majorVersion: XYZ)
     ]
 )
 ```
@@ -102,4 +102,4 @@ Want to learn about Swift memory layout?
 [Mike Ash](https://github.com/mikeash) gave and awesome [talk](https://academy.realm.io/posts/goto-mike-ash-exploring-swift-memory-layout/) on just that.
 
 ## License
-Runtime is available under the MIT license. See the LICENSE file for more info.
+Runtime and Convertor are available under the MIT license. See the LICENSE file for more info.
