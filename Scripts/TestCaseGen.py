@@ -77,7 +77,7 @@ def get_words(line):
 def generate_providers():
     test_path = "../RuntimeTests/*"
     output_file = "../RuntimeTests/TestProviders.swift"
-    linux_main = "../RuntimeTests/LinuxMain.swift"
+#    linux_main = "../RuntimeTests/LinuxMain.swift"
 
     extensions = []
     class_names = []
@@ -111,17 +111,17 @@ def generate_providers():
         for ext in extensions:
             f.write(ext)
             continue
-
-    with open(linux_main, "w") as f:
-        f.write("// This file is generated. Please do not add to source control.\n")
-        f.write("@testable import Runtime\n")
-        f.write("import XCTest\n\n")
-
-        f.write("XCTMain([")
-        for c in class_names:
-            f.write(" \n   testCase(" + c + ".allTests),")
-            continue
-        f.write("\n])")
+#
+#    with open(linux_main, "w") as f:
+#        f.write("// This file is generated. Please do not add to source control.\n")
+#        f.write("@testable import Runtime\n")
+#        f.write("import XCTest\n\n")
+#
+#        f.write("XCTMain([")
+#        for c in class_names:
+#            f.write(" \n   testCase(" + c + ".allTests),")
+#            continue
+#        f.write("\n])")
              
 
 if __name__ == '__main__':

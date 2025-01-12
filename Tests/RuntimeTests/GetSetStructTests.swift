@@ -287,6 +287,39 @@ class GetSetStructTests: XCTestCase {
         XCTAssert(person.age == 25)
     }
     // swiftlint:enable force_cast
+    
+    // jmj
+    func testComputedProperty() throws {
+        let info = try typeInfo(of: Person_jmj.self)
+        for p in info.properties {
+            print(p)
+        }
+        let f = try info.property(named: "list")
+        let t1 = try typeInfo(of: f.type)
+        print(t1.isArray, t1.elementType as Any)
+        
+//        let md = try typeInfo(of: type(of: Person_jmj.self))
+//        for p in md.properties {
+//            print(p)
+//        }
+        print("done")
+//        let age = try info.property(named: "age")
+//        var person = Person()
+//        let newValue = "this will not work"
+//        try age.set(value: newValue, on: &person)
+//        XCTAssert(person.age == 23)
+    }
+
+}
+fileprivate struct Person_jmj {
+    static var table = "person"
+    var firstname = "Wes"
+    var lastname = "Wickwire"
+    var list: [Int] = [1, 2, 3, 4, 5]
+    var age: Int {
+        get { 23 }
+        set { }
+    }
 }
 
 fileprivate struct Person {

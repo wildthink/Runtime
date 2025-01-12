@@ -39,7 +39,7 @@ extension Array: SealedToRuntime {}
 public extension Runtime.TypeInfo {
     var isOptional: Bool { kind == .optional }
     var elementType: Any.Type? { self.genericTypes.first }
-    var isArray: Bool { self.type is RuntimeArrayType }
+    var isArray: Bool { self.type is RuntimeArrayType.Type }
     
     var is_objCClassWrapper: Bool {
         properties[0].kind == .objCClassWrapper

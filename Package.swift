@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
 let package = Package(
     name: "Runtime",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v14),
         .iOS(.v13), .tvOS(.v13),
     ],
     products: [
