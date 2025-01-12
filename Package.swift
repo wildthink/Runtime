@@ -10,16 +10,12 @@ let package = Package(
     ],
     products: [
         .library(name: "Runtime", targets: ["Runtime"]),
-        .library(name: "Converter", targets: ["Converter"]),
         .library(name: "CRuntime", targets: ["CRuntime"]),
         ],
     targets: [
         .target(
             name: "Runtime",
             dependencies: ["CRuntime"]),
-        .target(
-            name: "Converter",
-            dependencies: ["Runtime"]),
         .target(
             name: "CRuntime",
             dependencies: []),

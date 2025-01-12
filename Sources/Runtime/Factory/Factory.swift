@@ -72,7 +72,8 @@ func buildClass(type: Any.Type) throws -> Any {
     // We could use md.alignment and deduct 1, or just use the instanceAlignmentMask from the ClassMetadata.
     let alignmentMask = Int(md.pointer.pointee.instanceAlignmentMask)
 
-    guard let value = swift_allocObject(metadata, instanceSize, alignmentMask) else {
+    guard let value = swift_allocObject(metadata, instanceSize, alignmentMask)
+    else {
             throw RuntimeError.unableToBuildType(type: type)
     }
 
@@ -126,7 +127,6 @@ func defaultValue(of type: Any.Type) throws -> Any {
     } else if let isOptional = type as? ExpressibleByNilLiteral.Type {
         return isOptional.init(nilLiteral: ())
     }
-    // jmj
     else if let fac = type as? NSObject.Type {
         return fac.init()
     }

@@ -73,7 +73,7 @@ class MetadataTests: XCTestCase {
     
     func testResilientClass() {
         #if canImport(Darwin)
-        class DerivedResilient: JSONEncoder {}
+        class DerivedResilient: JSONEncoder, @unchecked Sendable {}
         let md1 = ClassMetadata(type: BaseClass.self)
         let md2 = ClassMetadata(type: JSONDecoder.self)
         let md3 = ClassMetadata(type: DerivedResilient.self)
