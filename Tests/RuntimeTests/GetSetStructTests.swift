@@ -307,4 +307,3 @@ fileprivate struct Pet {
         self.age = age
     }
 }
-// swiftlint:enable type_body_length
